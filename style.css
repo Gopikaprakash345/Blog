@@ -1,0 +1,201 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial, sans-serif;
+}
+
+body{
+  background:#000814;
+  color:white;
+  overflow-x:hidden;
+}
+
+.stars{
+  position:fixed;
+  width:100%;
+  height:100%;
+  background:url("https://www.transparenttextures.com/patterns/stardust.png");
+  animation:moveStars 120s linear infinite;
+  z-index:-1;
+}
+
+@keyframes moveStars{
+  from{background-position:0 0;}
+  to{background-position:10000px 5000px;}
+}
+.container{
+  width:90%;
+  max-width:1100px;
+  margin:auto;
+}
+header{
+  background:#020617;
+  padding:15px 40px;
+}
+
+.nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  max-width:1200px;
+  margin:auto;
+}
+
+.logo{
+  color:#00f5ff;
+  font-size:24px;
+}
+
+.nav-links{
+  list-style:none;
+}
+
+.nav-links li{
+  display:inline-block;
+}
+
+.nav-links a{
+  color:white;
+  text-decoration:none;
+  margin-left:20px;
+}
+
+header h2{
+  color:#00f5ff;
+}
+
+nav a{
+  color:white;
+  text-decoration:none;
+  margin-left:20px;
+}
+
+.hero{
+  text-align:center;
+  padding:80px 20px;
+}
+
+.hero h1{
+  font-size:40px;
+  margin-bottom:20px;
+}
+
+.rotating-planet{
+  width:180px;
+  height:180px;
+  border-radius:50%;
+  object-fit:cover;
+  animation:rotate 20s linear infinite;
+  display:block;
+  margin:30px auto;
+}
+
+@keyframes rotate{
+  from{transform:rotate(0deg);}
+  to{transform:rotate(360deg);}
+}
+
+.blog{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:2rem;
+  padding:4rem 2rem;
+}
+
+.blog-card{
+  background:rgba(255,255,255,0.05);
+  padding:30px;
+  border-radius:15px;
+  text-align:center;
+  transition:0.4s;
+}
+
+.blog-card:hover{
+  transform:translateY(-10px);
+  box-shadow:0 0 30px #00f5ff;
+}
+
+.read-btn{
+  display:inline-block;
+  margin-top:15px;
+  background:#00f5ff;
+  color:black;
+  padding:8px 15px;
+  text-decoration:none;
+  border-radius:20px;
+}
+.post{
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-direction:column;
+  text-align:center;
+  padding:40px;
+  background-size:cover;
+  background-position:center center;
+  background-repeat:no-repeat;
+  position:relative;
+}
+.post::before{
+  content:"";
+  position:absolute;
+  width:100%;
+  height:100%;
+  top:0;
+  left:0;
+  background:rgba(0,0,0,0.6);
+}
+
+.post h1,
+.post p,
+.post a{
+  position:relative;
+  z-index:2;
+  max-width:800px;
+}
+
+.post h1{
+  font-size:40px;
+  margin-bottom:20px;
+}
+
+.post p{
+  font-size:18px;
+  margin-bottom:15px;
+}
+
+.post a{
+  margin-top:20px;
+  background:#00f5ff;
+  color:black;
+  padding:8px 15px;
+  text-decoration:none;
+  border-radius:20px;
+}
+
+.blackhole-bg{
+  background-image:url("images/blackhole.jpg");
+}
+
+.mars-bg{
+  background-image:url("https://images.unsplash.com/photo-1580428180121-0c3a1f0c8e0f?auto=format&fit=crop&w=1920&q=80");
+}
+
+
+.galaxy-bg{
+  background-image:url("images/galaxy.jpg");
+}
+
+footer{
+  background:#020617;
+  text-align:center;
+  padding:1.5rem 0;
+}
+
+@media(max-width:768px){
+  .hero h1{
+    font-size:28px;
+  }
+}
